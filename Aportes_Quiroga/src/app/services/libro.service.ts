@@ -15,7 +15,7 @@ export class LibroService {
   }
   getBook(): Observable<Book[]> {
     const placeRef = collection(this.firestore, 'Libros');
-    return collectionData(placeRef, {idField: 'Libros'}) as Observable<Book[]>;
+    return collectionData(placeRef, {idField: 'name'}) as Observable<Book[]>;
   }
   deleteBook(book: Book){
     const placeDocRef = doc(this.firestore, `Libros/${book.name}`)
