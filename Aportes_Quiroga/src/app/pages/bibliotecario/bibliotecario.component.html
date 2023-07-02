@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Hola</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="/Aportes_Quiroga/src/assets/img/image-removebg-preview.png" width="10px">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <img src="assets/img/bg.png" class="logo nav-link" width="250" height="80">
+      <ul class="nav-menu">
+          <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Libros descargados</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Biblioteca</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="contenedor">
+      <p class="titulo">Registro del Libro</p>
+      <p class="nameBook" >Name:</p>
+      <input class="datos" formControlName="name">
+      <p class="file" >Archivo:</p>
+      <input class="upload" type="link" formControlName="file">
+      <p class="desc" >Descripcion:</p>
+      <textarea class="descp" placeholder="Revolucion Fracesa" formControlName="description"></textarea>
+      <p class="cat" >Categoria:</p>
+      <select class="option">
+        <option disabled selected >Seleccione una categoria</option>
+        <option >Historico</option>
+        <option >Romantico</option>
+        <option >Cientifico</option>
+        <option >Comedia Romantica</option>
+      </select>
+      <p class="image" >Imagen:</p>
+      <input class="image2" type="file" accept="image/*" formControlName="image">
+      <p class="nameEdit" >Editorial:</p>
+      <input class="datos2" formControlName="editorial" placeholder="SMBOOKS">
+      <input type="submit" value="Enviar" class="btn btn-info">
+    </div>
+  </form>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
